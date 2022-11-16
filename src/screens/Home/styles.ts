@@ -16,7 +16,7 @@ export const BoxChiefImage = styled.View`
   flex: 1;
   width: 100%;
 
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.4);
   align-items: center;
 `;
 
@@ -52,25 +52,3 @@ export const BoxOptions = styled.View`
   flex-direction: row;
   margin-top: ${RFValue(30)}px;
 `;
-
-export const Option = styled.ImageBackground`
-  width: ${RFValue(105)}px;
-  height: ${RFValue(105)}px;
-  border-radius: ${RFValue(10)}px;
-  overflow: hidden;
-  background-color: #fff;
-
-  elevation: 5;
-
-  margin: 0 10px;
-`;
-
-export const ShadowImage = styled.View`
-  flex: 1;
-  background-color: rgba(0, 0, 0, 0.5);
-
-  align-items: center;
-  justify-content: center;
-`;
-
-export const ButtonOption = styled.TouchableOpacity``;

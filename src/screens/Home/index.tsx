@@ -3,6 +3,7 @@ import React from 'react';
 import { StatusBar } from 'react-native';
 
 import ChiefWoman from '../../assets/chiefwoman.png';
+import { ButtonWelcomeRoles } from '../../components/ButtonWelcomeRoles';
 
 import * as S from './styles';
 
@@ -33,40 +34,19 @@ export const Home = () => {
         <S.RestaurantName>Welcome to Vegreen</S.RestaurantName>
 
         <S.BoxOptions>
-          <S.ButtonOption>
-            <S.Option
-              source={{
-                uri: 'https://img.freepik.com/free-vector/green-restaurant-menu-background_23-2147490040.jpg',
-              }}
-              resizeMode="cover"
-            >
-              <S.ShadowImage>
-                <S.Title>Menu</S.Title>
-              </S.ShadowImage>
-            </S.Option>
-          </S.ButtonOption>
-          <S.ButtonOption onPress={handleNavigateLocation}>
-            <S.Option
-              source={{
-                uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIhXVTZVtIw92zmhTfo2ocTNhOfOyKQkajsA&usqp=CAU',
-              }}
-            >
-              <S.ShadowImage>
-                <S.Title>Location</S.Title>
-              </S.ShadowImage>
-            </S.Option>
-          </S.ButtonOption>
-          <S.ButtonOption>
-            <S.Option
-              source={{
-                uri: 'https://i.pinimg.com/originals/48/89/a3/4889a3eefec6c33e097c0d2aaf00ff1d.jpg',
-              }}
-            >
-              <S.ShadowImage>
-                <S.Title>Orders</S.Title>
-              </S.ShadowImage>
-            </S.Option>
-          </S.ButtonOption>
+          <ButtonWelcomeRoles
+            title="Menu"
+            uri="https://img.freepik.com/free-vector/green-restaurant-menu-background_23-2147490040.jpg"
+          />
+          <ButtonWelcomeRoles
+            title="Location"
+            uri="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIhXVTZVtIw92zmhTfo2ocTNhOfOyKQkajsA&usqp=CAU"
+            onPress={handleNavigateLocation}
+          />
+          <ButtonWelcomeRoles
+            title="Orders"
+            uri="https://i.pinimg.com/originals/48/89/a3/4889a3eefec6c33e097c0d2aaf00ff1d.jpg"
+          />
         </S.BoxOptions>
       </S.BoxAppInfo>
     </S.Container>
