@@ -22,11 +22,7 @@ export const Home = () => {
       }}
       resizeMode="cover"
     >
-      <StatusBar
-        backgroundColor="transparent"
-        barStyle="light-content"
-        translucent
-      />
+      <StatusBar hidden />
 
       <S.BoxChiefImage>
         <S.ImageChief source={ChiefWoman} resizeMode="cover" />

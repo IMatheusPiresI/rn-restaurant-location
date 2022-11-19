@@ -46,10 +46,7 @@ export const RestaurantLocation = () => {
     Platform.OS === 'android'
       ? PermissionsAndroid.request(
           PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
-        ).then((log) => {
-          console.log('User accept');
-          console.log(log, 'log');
-        })
+        )
       : '';
   };
 
@@ -87,6 +84,7 @@ export const RestaurantLocation = () => {
   useEffect(() => {
     getMyLocation();
   }, []);
+
   return (
     <S.Container>
       <StatusBar hidden />
