@@ -11,11 +11,12 @@ import Geolocation from '@react-native-community/geolocation';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { useTheme } from 'styled-components';
+import { useNavigation } from '@react-navigation/native';
+import { GOOGLE_API_KEY } from '@env';
 
 import { ButtonTypeVehicle } from '../../components/ButtonTypeVehicle';
 
 import * as S from './styles';
-import { useNavigation } from '@react-navigation/native';
 
 type Location = {
   latitude: number;
@@ -38,7 +39,6 @@ export const RestaurantLocation = () => {
   const { width, height } = Dimensions.get('window');
   const [typeVehicle, setTypeVehicle] = useState<Vehicle>('DRIVING');
   const [infoRoute, setInfoRoute] = useState<InfoRoute>(undefined);
-  console.log;
   const [location, setLocation] = useState<Location | undefined>(undefined);
   const theme = useTheme();
 
@@ -67,7 +67,7 @@ export const RestaurantLocation = () => {
         });
       },
       () => {
-        console.log('erro');
+        console.log('error');
       },
       {
         enableHighAccuracy: true,
@@ -132,7 +132,7 @@ export const RestaurantLocation = () => {
             latitude: -15.827228,
             longitude: -48.113813,
           }}
-          apikey={'AIzaSyBp-zP6Ts9i36u2FSSGrjS7psLXTePFkRs'}
+          apikey={GOOGLE_API_KEY}
           language={'pt-BR'}
           region={'BR'}
           mode={typeVehicle}

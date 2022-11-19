@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { StatusBar } from 'react-native';
@@ -10,7 +11,7 @@ import * as S from './styles';
 export const Home = () => {
   const navigation = useNavigation();
 
-  const handleNavigateLocation = () => {
+  const handleGoToLocation = () => {
     navigation.navigate('RestaurantLocation');
   };
 
@@ -41,7 +42,7 @@ export const Home = () => {
           <ButtonWelcomeRoles
             title="Location"
             uri="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIhXVTZVtIw92zmhTfo2ocTNhOfOyKQkajsA&usqp=CAU"
-            onPress={handleNavigateLocation}
+            onPress={handleGoToLocation}
           />
           <ButtonWelcomeRoles
             title="Orders"
